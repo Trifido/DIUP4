@@ -16,8 +16,12 @@
         <?php
 			
 			include("./src/php/header.php");
+		
+			include("./src/php/menu.php");
 			
-			echo "SEPARADOOOOOR";
+			include("./src/php/login.php");
+			
+			include("./src/php/content.php");
 			
 			include("./src/php/footer.php");
 			

@@ -1,20 +1,20 @@
 <footer>
-	<div id="visor">
-		<div id="cnt-imagenes">
-			<img id="banner" src="./image/banners/1.png" title="UGR" alt="banner ugr">
-			<img id="banner" src="./image/banners/2.png" title="ETSIIT" alt="banner ETSIIT">
-			<img id="banner" src="./image/banners/3.png" title="Departamento de Informática" alt="banner dep inf">
-			<img id="banner" src="./image/banners/1.png" title="UGR" alt="banner ugr">
-		</div>
-	</div>
 		
-	<p>
-		C/ Periodista Daniel Saucedo Aranda, s/n<br>
-		18071 GRANADA
-	</p>
-		
-	<p>
-		congreso_sibw@emaildelaetsiit.es<br>
-		Tlf: 998 345 654
-	</p>
+	<div id="footer_izquierda">
+    	<h1>+Información</h1>
+    </div>
+    
+    <div id="footer_centro">
+    	
+    </div>
+    
+    <div id="footer_derecha">
+    	<div id="head_button_top">
+            <a>Home</a> &emsp;&emsp;<a>About</a> &emsp;&emsp; <a>Contact</a>
+        </div>
+            <br>
+        <div id="head_button_bot">
+            <a>Twitter</a> &emsp; <a>Facebook</a> &emsp; <a>Google plus </a>
+        </div>
+    </div>
 </footer>
