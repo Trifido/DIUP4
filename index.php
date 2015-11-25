@@ -50,7 +50,9 @@
 			
 			if( isset( $_GET["login"] ) )
 				include( "./src/php/contents/login.php" );
-			else
+			else if( isset( $_GET["register"] ) )
+				include( "./src/php/contents/registro.php" );
+			else 
 				include( "./src/php/content.php" );
 			
 			

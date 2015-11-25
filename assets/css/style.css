@@ -10,7 +10,6 @@ a {
 	
 	width: 800px;
 	background-color: #8C8FB0;
-	height:200px;
 	margin-top: 70px;
 }
 
@@ -68,7 +67,91 @@ a {
 	padding: 5px;
 }
 
+.button_square{
+	
+	height: 100px;
+	width: 770px;
+	margin:5px auto;
+	background-image:url(../img/botoncillos.gif);
+	border: 1px solid black;
+	padding-top: 1px;
+}
 
+.button_square ul li {
+	
+	border: 1px solid white;
+	background-color: #7CD691;
+	padding: 25px 50px 25px 50px;
+	display:inline-block;
+	opacity: 1;
+	margin-left: 120px;
+	
+}
+
+.button_square ul span li{
+	
+	background-color: orange;
+	
+}
+
+.button_square a {
+	font-weight: bold;
+	text-decoration: none;
+	color: black;	
+}
+
+.banner_empresa{
+	
+	margin-top:5px;
+	margin-left: 10px;
+	padding-top: 15px;
+	width: 778px;
+	font-size:36px;
+	height: 60px;
+	text-align:center;
+	background-image:url(../img/banner_empresa.JPG);
+	background-repeat: no-repeat;
+	background-position:center;
+	background-size:cover;
+	border: 1px solid black;
+}
+
+.banner_empresa a{
+
+	width: 778px;
+	height: 60px;
+	background-color:white;
+	opacity:0.7;
+	padding: 16px 319px 19px 319px;
+	
+}
+
+
+.marco_empresa{
+	
+	background-color:#E8EC66;
+	width: 768px;
+	border: 1px solid black;
+	margin: 0 auto;
+	margin-left: 10px;
+	display:inline-block;
+	padding:10px 5px 5px 5px;
+}
+
+#foto_izquierda{
+	
+	float: left;
+	border: 2px solid black;
+	margin-top: 5px;
+	
+}
+
+#foto_derecha{
+	
+	float: right;
+	border: 2px solid black;
+	margin-top: 5px;
+}
 /******************* BARRA BÚSQUEDA ******************/
 
 .busqueda {
