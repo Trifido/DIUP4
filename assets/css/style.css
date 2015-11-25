@@ -1,3 +1,11 @@
+a {
+	
+	text-decoration: none;
+	
+}
+
+/******************* CONTENT ******************/
+
 .content{
 	
 	width: 800px;
@@ -6,11 +14,94 @@
 	margin-top: 70px;
 }
 
-.footer{
+.init_session{
 	
-	color:red;
+	width: 800px;
+	background-image:url(../img/bg-login.png);
+	margin-top: 70px;
+	background-repeat: no-repeat;
+    background-position: right top;
+	height:335px;
+	background-size:contain;
+	padding-top: 38px;
+}
+
+.session_square{
+	
+	border: 2px solid black;
+	width: 395px;
+	background-color: white;
+	opacity: 0.8;
+	margin: 0 auto;
+	text-align:center;
+	
 	
 }
+
+.session_square h1{
+	
+	font-size:35px;
+	
+}
+
+.barra_sesion{
+	
+	padding-bottom: 20px;
+	
+}
+
+.barra_sesion #texto{
+	
+	width:210px;
+	padding: 5px;
+	margin: 5px;
+	text-align: center;
+	
+}
+
+.barra_sesion #button{
+	
+	width: 100px;
+	text-align: center;
+	border: 1px black solid;
+	margin: 5px ;
+	padding: 5px;
+}
+
+
+/******************* BARRA BÚSQUEDA ******************/
+
+.busqueda {
+	
+	width: 800px;
+	
+}
+
+.barra_busqueda {
+	
+	padding: 20px 0 0 10px;
+	margin: 0 auto;
+	
+}
+
+.barra_busqueda #texto{
+	
+	width: 640px;
+	height: 24px;
+	
+}
+
+.barra_busqueda #submit {
+	
+	width: 130px;
+	height: 30px;
+	color:black;
+	
+}
+
+
+
+/******************* HEADER ******************/
 
 .header{
 	
@@ -71,7 +162,11 @@
 	
 
 }
-
+.menu_login a{
+	
+	color:black;
+	
+}
 	#login{
 		
 		width:150px;
@@ -100,10 +195,26 @@
 		background-color:#05920C;
 	}
 	
+	#logout{
+		
+		text-align:center;
+		color:white;
+		font-weight:bold;
+		background-color: gray;
+		padding: 21px 0 24px 0 ;
+		
+	}
+	
 .menu{
 	
 	width: 650px;
 	float:left;
+	
+}
+
+.menu a:visited { 
+
+	text-decoration: none; color:black;
 	
 }
 
@@ -125,7 +236,7 @@
 	padding: 3px 3px;
 	display: inline-block;
 	width:150px;
-	height:55px;
+	height:40px;
 	
 }
 
@@ -135,14 +246,16 @@
 	
 }
 
-.menu ul li a{
+.menu ul a li  {
 	
-	display:block;
-	padding-top: 16px;
+	display:inline-block;
+	padding-top: 20px;
 	
 }
 
-/* FOOTER */
+
+
+/******************* FOOTER ******************/
 
 #footer_derecha{
 	
@@ -182,3 +295,4 @@
 	color:yellow;
 	
 }
+

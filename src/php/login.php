@@ -1,9 +1,6 @@
- 
-        
-        
 <div class="menu_login">	<!-- init login -->
 		
-        <div id="login"><a>LOGIN</a></div>
-        <div id="registro"><a>REGISTRO</a></div>
+        <a href="index.php?login">		<div id="login">	LOGIN	</div></a>
+        <a href="index.php?register">	<div id="registro">	REGISTRO</div></a>
 			
-</div>						<!-- end menu -->
+</div>						<!-- end login -->

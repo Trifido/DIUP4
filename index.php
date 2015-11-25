@@ -1,3 +1,21 @@
+<?php
+	error_reporting(-1);
+	ini_set( 'display_errors', 1 );
+
+	// Creación de la BD
+	include("./src/php/basedatos/bd.php");
+	
+	session_start();
+	
+	if(isset($_GET['salir'])){
+		session_destroy();
+		header("location:index.php");
+	}
+	
+?>
+
+
+
 <!doctype html>
 <html>
 	<head>
@@ -15,15 +33,28 @@
         
         <?php
 			
-			include("./src/php/header.php");
-		
-			include("./src/php/menu.php");
+			if( isset( $_GET["contenido"] ) )
+				$contenido = $_GET["contenido"];	
+			else
+				$contenido="empresas";
 			
-			include("./src/php/login.php");
 			
-			include("./src/php/content.php");
+			include( "./src/php/header.php" );
+			include( "./src/php/menu.php" );
 			
-			include("./src/php/footer.php");
+			
+			if( isset( $_SESSION['user'] ) )
+				include( "./src/php/logout.php" );
+			else
+				include( "./src/php/login.php" );
+			
+			if( isset( $_GET["login"] ) )
+				include( "./src/php/contents/login.php" );
+			else
+				include( "./src/php/content.php" );
+			
+			
+			include( "./src/php/footer.php" );
 			
 		?>
         
