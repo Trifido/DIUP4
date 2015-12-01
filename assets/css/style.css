@@ -129,7 +129,7 @@ a {
 
 .marco_empresa{
 	
-	background-color:#E8EC66;
+	background-color:#E2E2A3;
 	width: 768px;
 	border: 1px solid black;
 	margin: 0 auto;
@@ -151,6 +151,74 @@ a {
 	float: right;
 	border: 2px solid black;
 	margin-top: 5px;
+}
+
+#desc_empresa_1{
+	
+	position: absolute;
+	background-color: white;
+	opacity: 0.0;
+	width: 400px;
+	height: 220px;
+	text-align:center;
+	margin: 7px 0 0 2px;
+	
+}
+
+#desc_empresa_2{
+	
+	position: absolute;
+	background-color: white;
+	opacity: 0.0;
+	width: 350px;
+	height: 220px;
+	text-align:center;
+	margin: 7px 0 0 416px;
+	
+}
+#desc_empresa_3{
+	
+	position: absolute;
+	background-color: white;
+	opacity: 0.0;
+	width: 350px;
+	height: 220px;
+	text-align:center;
+	margin: 236px 0 0 2px;
+	
+}
+#desc_empresa_4{
+	
+	position: absolute;
+	background-color: white;
+	opacity: 0.0;
+	width: 400px;
+	height: 220px;
+	text-align:center;
+	margin: 236px 0 0 366px;
+	
+}
+#desc_empresa_5{
+	
+	position: absolute;
+	background-color: white;
+	opacity: 0.0;
+	width: 400px;
+	height: 220px;
+	text-align:center;
+	margin: 465px 0 0 2px;
+	
+}
+#desc_empresa_6{
+	
+	position: absolute;
+	background-color: white;
+	opacity: 0.0;
+	width: 350px;
+	height: 220px;
+	text-align:center;
+	margin: 465px 0 0 416px;
+	
 }
 /******************* BARRA BÚSQUEDA ******************/
 
