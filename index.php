@@ -40,24 +40,39 @@
 			else
 				$contenido="empresas";
 			
-			
+			// Header
 			include( "./src/php/header.php" );
-			include( "./src/php/menu.php" );
 			
-			
-			if( isset( $_SESSION['user'] ) )
+			// cambio del menu en funcion del tipo de usuario logeado
+			if( isset( $_SESSION['user'] ) ){
+				
+				$contenido="noticias_user";
+				include( "./src/php/menu_user.php" );
 				include( "./src/php/logout.php" );
-			else
-				include( "./src/php/login.php" );
-			
-			if( isset( $_GET["login"] ) )
-				include( "./src/php/contents/login.php" );
-			else if( isset( $_GET["register"] ) )
-				include( "./src/php/contents/registro.php" );
-			else 
 				include( "./src/php/content.php" );
-			
-			
+				
+			}else if( isset( $_SESSION['empresa']) ){
+				
+				//$contenido="noticias_user";
+				include( "./src/php/menu_empresa.php" );
+				include( "./src/php/logout.php" );
+				include( "./src/php/content.php" );
+				
+			}else{
+				
+				include( "./src/php/menu.php" );
+				include( "./src/php/login.php" );
+				
+				// Cambio del contenido mostrado
+				if( isset( $_GET["login"] ) )
+					include( "./src/php/contents/login.php" );
+				else if( isset( $_GET["register"] ) )
+					include( "./src/php/contents/registro.php" );
+				else 
+					include( "./src/php/content.php" );
+			}
+				
+			// Footer
 			include( "./src/php/footer.php" );
 			
 		?>

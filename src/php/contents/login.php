@@ -34,13 +34,26 @@
 				
 				$_SESSION['user']=$user;
 				header("location:index.php");
-			}
-			else
-				echo "<p id=error><span>Usuario o contraseña incorrecto!!</span></p>";
+				
+			}else{
+				
+				$consulta=$mysqli->query("SELECT user FROM empresas WHERE
+									user='".$user."' and pass='".$pass."'");
+				
+				if( $consulta->num_rows ){
+				
+					$user=$consulta->fetch_row();
+					// Cierre de conexión.
 					
+					$_SESSION['empresa']=$user;
+					header("location:index.php");
+	
+				}else
+				
+					echo "<p id=error><span>Usuario o contraseña incorrecto!!</span></p>";		
+				}
 			}
-		
-		
+			
 		// Cierre de conexión.
 		$mysqli->close();
 	}
