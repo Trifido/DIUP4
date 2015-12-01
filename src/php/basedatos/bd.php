@@ -47,6 +47,17 @@
 							VALUES ( 'pepe', 'robledo', 's@localhost.dev', 'pepe', 1234 )" );
 	}
 	
+	// CREACION DEL ADMIN EN USUARIOS CON PASS 1234
+	$consulta=$mysqli->query( "SELECT * FROM usuarios WHERE user='admin'" );
+	$filas=$consulta->num_rows;
+
+	// Si la consulta devuelve 0 filas es que pepe
+	if( !$filas )
+	{
+		$mysqli->query( "INSERT INTO usuarios ( nombre, apellidos, email, user, pass, admin ) 
+							VALUES ( 'alberto', 'meana', 's@localhost.dev', 'admin', 1234, 1 )" );
+	}
+	
 	// Cierre de conexión.
 	$mysqli->close();
 	

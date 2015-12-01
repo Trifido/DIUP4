@@ -247,7 +247,7 @@ a {
 
 }
 
-.eventos #ev #title{
+.eventos #title{
 	
 	width: 425px;
 	padding: 10px;
@@ -257,9 +257,8 @@ a {
 	
 }
 
-.eventos #ev #texto{
+.eventos #texto{
 	
-	color:red;
 	border: 1px solid black;
 	background-color: white;
 	height: 175px;
@@ -268,11 +267,95 @@ a {
 	margin: 5px;
 	
 }
-.eventos #ev #right{
+.eventos #right{
 	
 	float:right;
 	
 }
+
+.eventos #noticias{
+	
+	width: 770px;
+	border: 1px solid black;
+	background-color:#D4D5AC;
+	margin-top: 25px;
+	
+}
+
+/******************* REGISTRO USUARIO ******************/
+
+#titulo_usuario_registro{
+	
+	text-align: center;
+	background-color:#959DF1;
+	width: 770px;
+	margin: 0 auto;
+	border: 1px solid black;
+	
+}
+
+#marco_usuario_registro{
+	
+	width: 770px;
+	margin-top: 5px;
+	margin-left: 14px;
+	border: 1px solid black;
+	background-color:#959DF1;
+	padding-top: 5px;
+	height: 200px;
+}
+
+#marco_usuario_registro #right{
+	
+	margin-top: 30px;
+	float: left;
+	
+}
+
+#marco_usuario_registro #right div{
+	
+	width: 80px;
+	text-align:center;
+	background-color: black;
+	color: white;
+	padding: 5px;
+	float: left;
+	
+}
+
+#marco_usuario_registro #formulario{
+
+	width: 700px;
+	margin:0 auto;
+	height: 180px;
+	
+}
+
+#marco_usuario_registro #text{
+
+	width: 200px;
+	padding: 5px;
+	
+}
+
+#marco_usuario_registro #formulario #botones{
+	
+	height: 100px;
+	float: right;
+	margin-top: 20px;
+	padding: 75px 115px 0px 115px;
+	border-left: 1px solid black;
+
+}
+
+#marco_usuario_registro #boton{
+	
+	width: 80px;
+	padding: 5px;
+	margin: 5px;
+	
+}
+
 /******************* BARRA BÚSQUEDA ******************/
 
 .busqueda {
@@ -302,6 +385,7 @@ a {
 	color:black;
 	
 }
+
 
 
 /******************* HEADER ******************/

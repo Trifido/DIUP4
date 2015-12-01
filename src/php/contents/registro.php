@@ -12,9 +12,9 @@
     <?php
 	
 		if( $_GET["register"] == "empresa" )
-			include( "./src/php/contents/registro_empresa.php" );
+			include( "registro_empresa.php" );
 		else if( $_GET["register"] == "usuario" )
-			include( "./src/php/contents/registro_usuario.php" );
+			include( "registro_usuario.php" );
 			
 	?>
     
