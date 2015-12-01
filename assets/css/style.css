@@ -11,6 +11,7 @@ a {
 	width: 800px;
 	background-color: #8C8FB0;
 	margin-top: 70px;
+	padding-bottom: 10px;
 }
 
 .init_session{
@@ -220,6 +221,58 @@ a {
 	margin: 465px 0 0 416px;
 	
 }
+
+.eventos{
+	
+	width: 773px;
+	margin: 0 auto;
+}
+
+.eventos #ev{
+	
+	width: 770px;
+	border: 1px solid black;
+	background-color:#E5C9E0;
+	margin-top: 25px;
+	
+}
+
+.eventos #img{
+	
+	height : 220px;
+	width : 300px;
+	margin: 5px;
+	border: 1px solid black;
+	background-color: white;
+
+}
+
+.eventos #ev #title{
+	
+	width: 425px;
+	padding: 10px;
+	border: 1px solid black;
+	text-align: center;
+	margin: 5px;
+	
+}
+
+.eventos #ev #texto{
+	
+	color:red;
+	border: 1px solid black;
+	background-color: white;
+	height: 175px;
+	width: 445px;
+	text-align: center;
+	margin: 5px;
+	
+}
+.eventos #ev #right{
+	
+	float:right;
+	
+}
 /******************* BARRA BÚSQUEDA ******************/
 
 .busqueda {
@@ -249,7 +302,6 @@ a {
 	color:black;
 	
 }
-
 
 
 /******************* HEADER ******************/
