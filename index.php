@@ -45,8 +45,7 @@
 			
 			// cambio del menu en funcion del tipo de usuario logeado
 			if( isset( $_SESSION['user'] ) ){
-				
-				$contenido="noticias_user";
+
 				include( "./src/php/menu_user.php" );
 				include( "./src/php/logout.php" );
 				include( "./src/php/content.php" );

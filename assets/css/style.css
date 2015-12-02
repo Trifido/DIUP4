@@ -301,7 +301,151 @@ a {
 
 }
 
+/******************* CSS EMPLEADOS ******************/
 
+.banner_miempresa{
+	
+	margin-top:5px;
+	margin-left: 10px;
+	padding-top: 15px;
+	width: 778px;
+	font-size:36px;
+	height: 60px;
+	text-align:center;
+	background-image:url(../img/banner_empresa.JPG);
+	background-repeat: no-repeat;
+	background-position:center;
+	background-size:cover;
+	border: 1px solid black;
+}
+
+.banner_miempresa a{
+
+	width: 778px;
+	height: 60px;
+	background-color:white;
+	opacity:0.7;
+	padding: 16px 300px 19px 301px;
+	
+}
+
+#foto_miempresa{
+	
+	border: 1px solid black;
+	width: 300px;
+	height: 200px;
+	margin-left: 10px;
+	float:left;
+	
+}
+
+#info_empresa{
+	
+	float:right;
+	border: 1px solid black;
+	width: 430px;
+	background-color:#EAEAD3;
+	
+}
+
+#nombre_empresa{
+	padding: 15px;
+	border-bottom: 1px solid black;
+	
+}
+
+#desc_empresa{
+	padding: 15px;
+	height: 122px;
+	
+}
+
+#footer_empresa{
+	padding: 5px;
+	margin-top: 10px;
+	border-top: 1px solid black;
+	float:left;
+	width:758px;
+}
+
+.banner_mis_salas{
+	
+	margin-top:30px;
+	margin-left: 10px;
+	padding-top: 15px;
+	width: 778px;
+	font-size:36px;
+	height: 60px;
+	text-align:center;
+	background-image:url(../img/banner_empresa.JPG);
+	background-repeat: no-repeat;
+	background-position:center;
+	background-size:cover;
+	border: 1px solid black;
+}
+
+.banner_mis_salas a{
+
+	width: 778px;
+	height: 60px;
+	background-color:white;
+	opacity:0.7;
+	padding: 16px 241px 19px 242px;
+	
+}
+
+#foto_misala1{
+	
+	border: 3px solid black;
+	width: 300px;
+	height: 200px;
+	margin-left: 50px;
+	float:left;
+}
+
+#foto_misala2{
+	
+	border: 3px solid black;
+	width: 300px;
+	height: 200px;
+	margin-right: 50px;
+	float:right;
+}
+#desc_empresa_7{
+	
+	position: absolute;
+	background-color: white;
+	opacity: 0.0;
+	width: 300px;
+	height: 200px;
+	text-align:center;
+	margin: 1px 0 0 11px;
+	
+}
+
+#desc_empresa_8{
+	
+	position: absolute;
+	background-color: white;
+	opacity: 0.0;
+	width: 300px;
+	height: 200px;
+	text-align:center;
+	margin: 3px 0 0 53px;
+	
+}
+
+#desc_empresa_9{
+	
+	position: absolute;
+	background-color: white;
+	opacity: 0.0;
+	width: 300px;
+	height: 200px;
+	text-align:center;
+	margin: 3px 0 0 415px;
+	
+}
 /******************* REGISTRO USUARIO ******************/
 
 #titulo_usuario_registro{
@@ -377,6 +521,13 @@ a {
 	border-radius: 4px;
 	background-color: gray;
 	color:white;
+}
+
+#boton_cursos1, #boton_cursos2, #boton_cursos3{
+	
+	float:right;
+	width: 100px;
+	
 }
 
 /******************* BARRA BÚSQUEDA ******************/

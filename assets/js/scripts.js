@@ -26,4 +26,35 @@ $(document).ready(function(){
 		}
 	);
 	
+	$( "[ id^=boton_cursos ]" ).click(
+	
+		function(){
+			
+			var num = this.id.slice(12);
+			var color;
+			var texto;
+			
+			if( $( '#boton_cursos' + num ).text().length == 8 ){
+				
+				color = "#E5C9E0";
+				texto = "apuntarse";
+				
+			}else{
+				
+				color = "#80C498";
+				texto = "cancelar";
+				
+			}
+			
+			if( num == 1 )
+				$( '#ev' ).css("background-color", color);
+			else if( num == 2)
+				$( '#ev' ).next().css("background-color", color);
+			else
+				$( '#ev' ).next().next().css("background-color", color);
+			
+			$( '#boton_cursos' + num ).text( texto );
+			
+		}
+	);
 });
