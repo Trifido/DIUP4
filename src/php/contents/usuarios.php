@@ -1,46 +1,58 @@
 
+<?php
+	include("./src/php/basedatos/usershandler.php");
+	$user = new Usuario;
+	$user->connect();
+	
+?>
 <div class = "eventos">
 	
     <div id="users">
-    
-        <img id ="img1" src ="./assets/img/user1.jpg">
+    	
+        <?php $user->get_user( "jose" ); ?>
+        
+        <img id ="img1" src ="./assets/img/<?php echo($user->foto);?>">
         
         <div id="right">
         	
             <div id="title">
-            	José Manuel Lupión Ibáñez
+            	<?php $user->throw_name(); ?>
             </div>
             
             <div id="texto">
-            	texto aquí del usuario 1
+            	<?php echo( $user->info );?>
             </div>
             
         </div>
         
-        <img id="img1" src ="./assets/img/user2.jpg">
+        <?php $user->get_user( "juan" ); ?>
+        
+        <img id="img1" src ="./assets/img/<?php echo($user->foto);?>">
         
         <div id="right">
         	
             <div id="title">
-            	Juán Martínez Sáez
+            	<?php $user->throw_name(); ?>
             </div>
             
             <div id="texto">
-            	texto aquí del usuario 2
+            	<?php echo( $user->info );?>
             </div>
             
         </div>
         
-        <img id="img1" src ="./assets/img/user3.jpg">
+        <?php $user->get_user( "maria" ); ?>
+        
+        <img id="img1" src ="./assets/img/<?php echo($user->foto);?>">
         
         <div id="right">
         	
             <div id="title">
-				María Díaz Rodríguez
+				<?php $user->throw_name(); ?>
             </div>
             
             <div id="texto">
-            	texto aquí del usuario 3
+            	<?php echo( $user->info );?>
             </div>
             
         </div>
