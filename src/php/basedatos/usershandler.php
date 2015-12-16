@@ -15,56 +15,75 @@
 		public $estado;
 		public $admin;
 		
-		public $servidor;
-		public $usuario;
-		public $passdb;
-		public $base_datos;
-		public $mysqli;
-		
-		public function connect(){
+		public function get_user( $consulta ){
 			
-			// Acceso a la BD	
-			$this->servidor = "localhost";
-			$this->usuario = "root";
-			$this->passdb = "";
-			$this->base_datos = "diu";
+			$this->id = $consulta["id"];
+			$this->nombre = $consulta["nombre"];
+			$this->apellidos = $consulta["apellidos"];
+			$this->email = $consulta["email"];
+			$this->user = $consulta["user"];
+			$this->pass = $consulta["pass"];
+			$this->info = $consulta["info"];
+			$this->foto = $consulta["foto"];
+			$this->estado = $consulta["estado"];
+			$this->admin = $consulta["admin"];
 			
-			// Conexión con el servidor.
-			$this->mysqli = new mysqli( $this->servidor, $this->usuario, $this->passdb );
-			if ( $this->mysqli->connect_errno ) {
-				echo "Fallo al conectar a MySQL: " . $this->mysqli->connect_error;
-			}
+			if( $this->foto == NULL )
+				$this->foto = "nofoto.jpg";
+			if( $this->info == NULL )
+				$this->info = "No hay descripcion aun";
 			
-			// Seleccionar la BD.
-			$this->mysqli->select_db( "$this->base_datos" );
-			
-		}
-		
-		public function get_user( $user ){
-			
-			$row = $this->mysqli->query( "SELECT * FROM usuarios WHERE user='".$user."'" );
-			if ($row->num_rows > 0){
-				$consulta = $row->fetch_assoc();
-				
-				$this->id = $consulta["id"];
-				$this->nombre = $consulta["nombre"];
-				$this->apellidos = $consulta["apellidos"];
-				$this->email = $consulta["email"];
-				$this->user = $consulta["user"];
-				$this->pass = $consulta["pass"];
-				$this->info = $consulta["info"];
-				$this->foto = $consulta["foto"];
-				$this->estado = $consulta["estado"];
-				$this->admin = $consulta["admin"];
-			}else{
-				echo "no results";
-       			return FALSE;
-			}
 		}
 		
 		public function throw_name(){
 			
 			echo( $this->nombre ." ". $this->apellidos);
+		}
+		
+		public function show_user(){
+			
+			echo( '<img id ="img1" src ="./assets/img/'.$this->foto.'">' );
+        
+			echo( '<div id="right">' );
+				
+				echo('<div id="title">');
+					$this->throw_name();
+				echo('</div>');
+				
+				echo('<div id="texto">');
+					echo( $this->info );
+				echo( '</div>' );
+				
+			echo('</div>');
+			
+		}
+		
+		public function show_profile(){
+			
+			echo( '<img id ="foto_perfil" src ="./assets/img/'.$this->foto.'">
+				<div id="preface">NOMBRE : </div> 
+				<div id="proface">'.$this->nombre.'</div>
+			
+				<div id="preface">APELLIDOS: </div>
+				<div id="proface">'.$this->apellidos.'</div>
+			
+				<div id="preface">EMAIL: </div>
+				<div id="proface">'.$this->email.'</div>
+				<br>
+				<div id="preface">DESCRIPCION:</div>
+				<br>
+				<br>
+				<div id="proface_desc">'.$this->info.'</div> ' 
+			);
+		}
+		
+		public function check_password( $pass ){
+			
+			if( $this->pass == $pass )
+				return true;
+			else
+				return false;
+			
 		}
 		
 	}

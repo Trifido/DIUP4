@@ -1,62 +1,29 @@
-
-<?php
-	include("./src/php/basedatos/usershandler.php");
-	$user = new Usuario;
-	$user->connect();
-	
-?>
 <div class = "eventos">
 	
     <div id="users">
     	
-        <?php $user->get_user( "jose" ); ?>
-        
-        <img id ="img1" src ="./assets/img/<?php echo($user->foto);?>">
-        
-        <div id="right">
-        	
-            <div id="title">
-            	<?php $user->throw_name(); ?>
-            </div>
-            
-            <div id="texto">
-            	<?php echo( $user->info );?>
-            </div>
-            
-        </div>
-        
-        <?php $user->get_user( "juan" ); ?>
-        
-        <img id="img1" src ="./assets/img/<?php echo($user->foto);?>">
-        
-        <div id="right">
-        	
-            <div id="title">
-            	<?php $user->throw_name(); ?>
-            </div>
-            
-            <div id="texto">
-            	<?php echo( $user->info );?>
-            </div>
-            
-        </div>
-        
-        <?php $user->get_user( "maria" ); ?>
-        
-        <img id="img1" src ="./assets/img/<?php echo($user->foto);?>">
-        
-        <div id="right">
-        	
-            <div id="title">
-				<?php $user->throw_name(); ?>
-            </div>
-            
-            <div id="texto">
-            	<?php echo( $user->info );?>
-            </div>
-            
-        </div>
-        
+        <?php
+		
+			include( "./src/php/basedatos/bdhandler.php" );
+			include( "./src/php/basedatos/usershandler.php" );
+			
+			$bd = new bdhandler( "localhost", "diu", "root", "" );
+			
+			$user = new Usuario();
+			
+			$consulta = $bd->connection->query( "SELECT * FROM usuarios" );
+			
+			while( $row = $consulta->fetch_assoc() ){
+				
+				$user->get_user( $row );
+				if( !$user->admin )
+					$user->show_user();
+				
+			}
+			
+			$bd->close();
+			
+		?>
 	</div>
     
 </div>
