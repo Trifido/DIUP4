@@ -21,9 +21,10 @@
 				$apellidos = $_POST['apellidos'];
 			else
 				$apellidos = $user->apellidos;
-			if( $_POST['foto'] != "" )
-				$foto = $_POST['foto'];
-			else
+			if( $_FILES["foto"]["name"] ){
+				$foto = basename($_FILES["foto"]["name"]);
+				include( "./src/php/upload.php" );
+			}else
 				$foto = $user->foto;
 			if( $_POST['descripcion'] != "" )
 				$info = $_POST['descripcion'];
@@ -50,7 +51,7 @@
 	
     <span> MODIFICAR PERFIL </span>
     
-	<form id = "formulario_perfil" method = "post">           
+	<form id = "formulario_perfil" enctype="multipart/form-data" method = "post">           
             <a>NUEVO NOMBRE</a>
             <br>
             <input id="text" type="text" name="nombre" placeholder="nombre">
@@ -66,7 +67,7 @@
             <br>
             <a>NUEVA FOTO</a>
             <br>
-            <input id="text" type="text" name="foto" placeholder="nombre del archivo de la foto">
+            <input id="text" type="file" name="foto" >
             <br>
            <a> CONTRASEÑA</a>
            <br>
