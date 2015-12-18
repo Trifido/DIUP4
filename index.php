@@ -35,11 +35,26 @@
         
         <?php
 			
-			if( isset( $_GET["contenido"] ) )
+			if( isset( $_GET["contenido"] ) ){
 				$contenido = $_GET["contenido"];	
-			else
-				$contenido="empresas";
-			
+			}else{
+				
+				if( isset( $_SESSION['user'] ) ){
+					
+					$contenido="empresas";
+					
+				}else if( isset( $_SESSION['empresa'] ) ){
+					
+					$contenido="noticias_empresa";
+					
+				}else{
+					
+					$contenido="empresas";
+					
+				}	
+				
+			}
+				
 			// Header
 			include( "./src/php/header.php" );
 			

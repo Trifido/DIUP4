@@ -67,7 +67,7 @@
 					id INT ( 3 ) auto_increment,
 					user1 VARCHAR ( 50 ) NOT NULL,
 					user2 VARCHAR ( 50 ) NOT NULL,
-					puesto VARCHAR ( 50 ) NOT NULL,
+					puesto VARCHAR ( 50 ),
 					PRIMARY KEY(id, user1, user2)
 					)" 
 		);

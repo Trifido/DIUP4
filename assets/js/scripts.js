@@ -1,5 +1,5 @@
 $(document).ready(function(){
-
+	
 	$( "[ id^=desc_empresa_ ]" ).mouseenter(
 	
 		function(){

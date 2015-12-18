@@ -4,15 +4,36 @@
     <?php
 		
 		include( "./src/php/basedatos/bdhandler.php" );
-		include( "./src/php/basedatos/usershandler.php" );
 		
 		$db = new bdhandler( "localhost", "diu", "root", "" );
-		$query = $db->connection->query( "SELECT * FROM usuarios WHERE user = '".$_SESSION['user'][0]."'");
-		$user = new Usuario();
 		
-		$user->get_user( $query->fetch_assoc() );
+		if( isset( $_SESSION['user'] ) ){
+			
+			include( "./src/php/basedatos/usershandler.php" );
+			
+			$query = $db->connection->query( "SELECT * FROM usuarios WHERE user = '".$_SESSION['user'][0]."'");
+			$user = new Usuario();
+			
+			$user->get_user( $query->fetch_assoc() );
+			
+			$user->show_profile();
 		
-		$user->show_profile();
+		}else if( isset( $_SESSION['empresa'] ) ){
+			
+			include( "./src/php/basedatos/pymeshandler.php" );
+			
+			$query = $db->connection->query( "SELECT * FROM empresas WHERE user = '".$_SESSION['empresa'][0]."'");
+			
+			$pyme = new Pyme();
+			
+			$pyme->get_pyme( $query->fetch_assoc() );
+			
+			$pyme->show_profile();
+			
+		}else{
+			
+			//admin	
+		}
 		
 		$db->close();
 	?>

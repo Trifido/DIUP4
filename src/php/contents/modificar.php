@@ -1,13 +1,43 @@
 <?php
+
+	if( isset( $_SESSION['empresa'] ) ){
+		
+		$var = "NUEVO CIF";
+		$var2 = "cif";
+		$var3 = "empresas";
+		$var4 = 'empresa';
+		
+	}else{
+		
+		$var = "NUEVOS APELLIDOS";
+		$var2 = "apellidos";
+		$var3 = "usuarios";
+		$var4 = 'user';
+			
+	}
+
 	if( isset($_POST['aceptar'] ) ){
 		
 		include( "./src/php/basedatos/bdhandler.php" );
 		include( "./src/php/basedatos/usershandler.php" );
+		include( "./src/php/basedatos/pymeshandler.php" );
 		
 		$db = new bdhandler( "localhost", "diu", "root", "" );
-		$user = new Usuario();
-		$query = $db->connection->query( "SELECT * FROM usuarios WHERE user = '".$_SESSION['user'][0]."'");
-		$user->get_user( $query->fetch_assoc() );
+		$query = $db->connection->query( "SELECT * FROM ".$var3." WHERE user = '".$_SESSION[$var4][0]."'");
+		
+		if( isset( $_SESSION['empresa'] ) ){
+		
+			$user = new Pyme();
+			$user->get_pyme( $query->fetch_assoc() );
+			
+		}else{
+			
+			$user = new Usuario();
+			$user->get_user( $query->fetch_assoc() );
+				
+		}
+		
+		
 		
 		// Carga de nuevos datos
 		
@@ -17,10 +47,10 @@
 				$nombre = $_POST['nombre'];
 			else
 				$nombre = $user->nombre;
-			if( $_POST['apellidos'] != "" )
-				$apellidos = $_POST['apellidos'];
+			if( $_POST[$var2] != "" )
+				$apellidos = $_POST[$var2];
 			else
-				$apellidos = $user->apellidos;
+				$apellidos = $user->$var2;
 			if( $_FILES["foto"]["name"] ){
 				$foto = basename($_FILES["foto"]["name"]);
 				include( "./src/php/upload.php" );
@@ -31,11 +61,11 @@
 			else
 				$info = $user->info;
 				
-			$db->connection->query( "UPDATE usuarios SET nombre = '".$nombre."', 
-														 apellidos = '".$apellidos."',
+			$db->connection->query( "UPDATE ".$var3." SET nombre = '".$nombre."', 
+														 ".$var2." = '".$apellidos."',
 														 foto = '".$foto."',
 														 info = '".$info."'
-									WHERE user = '".$_SESSION['user'][0]."'
+									WHERE user = '".$_SESSION[$var4][0]."'
 			" );
 			
 		}else{
@@ -46,6 +76,9 @@
 		
 		$db->close();
 	}
+	
+	
+	
 ?>
 <div class="marco_perfil">
 	
@@ -56,9 +89,9 @@
             <br>
             <input id="text" type="text" name="nombre" placeholder="nombre">
             <br>
-            <a>NUEVOS APELLIDOS</a>
+            <a><?php echo $var ?></a>
             <br>
-            <input id="text" type="text" name="apellidos" placeholder="apellidos">
+            <input id="text" type="text" name="<?php echo $var2 ?>" placeholder="<?php echo $var2 ?>">
             <br>
            	<a>NUEVA DESCRIPCION</a>
             <br>

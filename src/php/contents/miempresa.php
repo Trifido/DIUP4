@@ -14,7 +14,12 @@
 		
 	}else{
 		
-		include( "./src/php/contents/pyme_logic/seleccionarempresa.php" );
+		$query2 = $db->connection->query( "SELECT * FROM pertenecer WHERE user1 = '".$user->user."'" );
+		
+		if( ( $row = $query2->fetch_assoc() ) )
+			echo "<h1>Esperando confirmación de la empresa: ".$row["user2"]."</h1>";
+		else
+			include( "./src/php/contents/pyme_logic/seleccionarempresa.php" );		
 		
 	}
 	

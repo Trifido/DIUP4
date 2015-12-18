@@ -301,6 +301,23 @@ a {
 
 }
 
+.empresas_select{
+	
+	width: 770px;
+	margin: 0 auto;
+	border: 1px solid white;
+	margin-top: 5px;
+	background-color: black;
+	padding: 5px;
+	color: white;
+}
+
+.empresas_select h1{
+	
+	color: Orange;
+	
+}
+
 /******************* CSS EMPLEADOS ******************/
 
 .banner_miempresa{
