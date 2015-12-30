@@ -650,6 +650,13 @@ a {
 	
 }
 
+#boton_noticias1, #boton_noticias2, #boton_noticias3{
+
+	float:right;
+	width: 100px;
+	
+}
+
 /******************* BARRA BÚSQUEDA ******************/
 
 .busqueda {

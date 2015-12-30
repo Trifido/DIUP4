@@ -1,3 +1,6 @@
+
+
+
 $(document).ready(function(){
 	
 	$( "[ id^=desc_empresa_ ]" ).mouseenter(
@@ -62,30 +65,66 @@ $(document).ready(function(){
 	
 		function(){
 			
-			var num = this.id.slice(12);
+			var num = this.id.slice(10);
 			var color;
 			var texto;
 			
-			if( $( '#boton_cursos' + num ).text().length == 8 ){
+			if( $( '#boton_baja' + num ).text().length == 13 ){
 				
 				color = "#E5C9E0";
-				texto = "apuntarse";
+				texto = "Dar de Baja";
 				
 			}else{
 				
-				color = "#80C498";
-				texto = "cancelar";
+				color = "#FC363B";
+				texto = "Cancelar Baja";
 				
 			}
 			
 			if( num == 1 )
+				$( '#title' ).css("background-color", color);
+			else if( num == 2)
+				$( '#title' ).next().css("background-color", color);
+			else if( num == 3)
+				$( '#title' ).next().next().css("background-color", color);
+			else
+				$( '#title' ).next().next().next().css("background-color", color);
+			
+			$( '#boton_cursos' + num ).text( texto );
+			
+		}
+	);
+
+
+	$( "[ id^=boton_noticias ]" ).click(
+	
+		function(){
+			
+			var num = this.id.slice(14);
+			var color;
+			var texto;
+			
+			if( $( '#boton_noticias' + num ).text().length == 6 ){
+				
+				color = "#E5C9E0";
+				texto = "Eliminar";
+				
+			}else{
+				
+				color = "#FC363B";
+				texto = "Añadir";
+				
+			}
+			
+			if( num == 1 ){
 				$( '#ev' ).css("background-color", color);
+			}
 			else if( num == 2)
 				$( '#ev' ).next().css("background-color", color);
 			else
 				$( '#ev' ).next().next().css("background-color", color);
 			
-			$( '#boton_cursos' + num ).text( texto );
+			$( '#boton_noticias' + num ).text( texto );
 			
 		}
 	);
