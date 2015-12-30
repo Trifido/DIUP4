@@ -69,28 +69,28 @@ $(document).ready(function(){
 			var color;
 			var texto;
 			
-			if( $( '#boton_baja' + num ).text().length == 13 ){
+			if( $( '#boton_baja' + num ).text().length != 11 ){
 				
 				color = "#E5C9E0";
 				texto = "Dar de Baja";
 				
 			}else{
-				
+
 				color = "#FC363B";
 				texto = "Cancelar Baja";
 				
 			}
 			
 			if( num == 1 )
-				$( '#title' ).css("background-color", color);
+				$( '#title1' ).css("background-color", color);
 			else if( num == 2)
-				$( '#title' ).next().css("background-color", color);
+				$( '#title2' ).css("background-color", color);
 			else if( num == 3)
-				$( '#title' ).next().next().css("background-color", color);
+				$( '#title3' ).css("background-color", color);
 			else
-				$( '#title' ).next().next().next().css("background-color", color);
+				$( '#title4' ).css("background-color", color);
 			
-			$( '#boton_cursos' + num ).text( texto );
+			$( '#boton_baja' + num ).text( texto );
 			
 		}
 	);

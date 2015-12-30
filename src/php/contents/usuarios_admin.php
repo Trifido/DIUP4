@@ -6,8 +6,8 @@
         
         <div id="right">
         	
-            <div id="title">
-            	José Manuel Lupión Ibáñez <button id="boton_baja1"> Dar de baja </button>
+            <div id="title1">
+            	José Manuel Lupión Ibáñez <button id="boton_baja1">Dar de baja</button>
             </div>
             
             <div id="texto">
@@ -20,8 +20,8 @@
         
         <div id="right">
         	
-            <div id="title">
-            	Juán Martínez Sáez <button id="boton_baja2"> Dar de baja </button>
+            <div id="title2">
+            	Juán Martínez Sáez <button id="boton_baja2">Dar de baja</button>
             </div>
             
             <div id="texto">
@@ -34,8 +34,8 @@
         
         <div id="right">
         	
-            <div id="title">
-				María Díaz Rodríguez <button id="boton_baja3"> Dar de baja </button>
+            <div id="title3">
+				María Díaz Rodríguez <button id="boton_baja3">Dar de baja</button>
             </div>
             
             <div id="texto">
@@ -48,8 +48,8 @@
         
         <div id="right">
         	
-            <div id="title">
-				Empresa: Farma <button id="boton_baja4"> Dar de baja </button>
+            <div id="title4">
+				Empresa: Farma <button id="boton_baja4">Dar de baja</button>
             </div>
             
             <div id="texto">
