@@ -24,7 +24,7 @@
 	 
 		if( !empty($_POST['user']) && !empty($_POST['pass']) ){
 			
-			$consulta=$mysqli->query("SELECT user FROM usuarios WHERE
+			$consulta=$mysqli->query("SELECT user, admin FROM usuarios WHERE
 									user='".$user."' and pass='".$pass."'");
 
 			if( $consulta->num_rows ){
@@ -32,7 +32,10 @@
 				$user=$consulta->fetch_row();
 				// Cierre de conexión.
 				
-				$_SESSION['user']=$user;
+				if($user[1])
+					$_SESSION['admin']=$user;
+				else
+					$_SESSION['user']=$user;
 				header("location:index.php");
 				
 			}else{

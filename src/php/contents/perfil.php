@@ -32,7 +32,14 @@
 			
 		}else{
 			
-			//admin	
+			include( "./src/php/basedatos/usershandler.php" );
+			
+			$query = $db->connection->query( "SELECT * FROM usuarios WHERE user = '".$_SESSION['admin'][0]."'");
+			$user = new Usuario();
+			
+			$user->get_user( $query->fetch_assoc() );
+			
+			$user->show_profile();
 		}
 		
 		$db->close();

@@ -71,6 +71,12 @@
 				include( "./src/php/menu_empresa.php" );
 				include( "./src/php/logout.php" );
 				include( "./src/php/content.php" );
+
+			}else if ( isset( $_SESSION['admin']) ){
+
+				include( "./src/php/menu_admin.php" );
+				include( "./src/php/logout.php" );
+				include( "./src/php/content.php" );
 				
 			}else{
 				

@@ -643,6 +643,13 @@ a {
 	
 }
 
+#boton_baja1, #boton_baja2, #boton_baja3, #boton_baja4{
+	
+	float:right;
+	width: 100px;
+	
+}
+
 /******************* BARRA BÚSQUEDA ******************/
 
 .busqueda {
