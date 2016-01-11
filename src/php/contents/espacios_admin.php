@@ -1,8 +1,8 @@
-<div class = "eventos">
+<div class = "eventos"> 
 
 	<div class="boton_nueva_noticia">
     	
-        <a href="index.php?contenido=espacio_form">NUEVO ESPACIO</a>
+        <a href="index.php?contenido=espacio_form_admin">NUEVO ESPACIO</a>
     	
     </div>
 	
@@ -31,5 +31,5 @@
 		?>
         
     </div>
-    
+
 </div>
