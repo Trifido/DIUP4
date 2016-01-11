@@ -212,6 +212,7 @@
 	// ------------------------
 	// EMPRESAS : 
 	// ------------------------
+		//  EMPRESA 1
 		//  Inserta en la tabla "empresas" la empresa farma con pass 1234
 		$consulta=$mysqli->query( "SELECT * FROM empresas WHERE user='farma'" );
 		$filas=$consulta->num_rows;
@@ -221,6 +222,66 @@
 		{
 			$mysqli->query( "INSERT INTO empresas ( nombre, cif, email, user, pass ) 
 								VALUES ( 'farma', '76767676', 's@localhost.dev', 'farma', 1234 )" );
+		}
+
+		//  EMPRESA 2
+		//  Inserta en la tabla "empresas" la empresa con pass 1234
+		$consulta=$mysqli->query( "SELECT * FROM empresas WHERE user='basti'" );
+		$filas=$consulta->num_rows;
+
+		// Si la consulta devuelve 0 filas es que el admin no existe
+		if( !$filas )
+		{
+			$mysqli->query( "INSERT INTO empresas ( nombre, cif, email, user, pass )
+										VALUES ( 'basti', '0b19e397', 'basti@localhost.dev', 'basti', 1234 )" );
+		}
+
+		//  EMPRESA 3
+		//  Inserta en la tabla "empresas" la empresa con pass 1234
+		$consulta=$mysqli->query( "SELECT * FROM empresas WHERE user='biocaoscontrol'" );
+		$filas=$consulta->num_rows;
+
+		// Si la consulta devuelve 0 filas es que el admin no existe
+		if( !$filas )
+		{
+			$mysqli->query( "INSERT INTO empresas ( nombre, cif, email, user, pass )
+												VALUES ( 'biocaoscontrol', '832n5k71', 'biocaos@localhost.dev', 'bio', 1234 )" );
+		}
+
+		//  EMPRESA 4
+		//  Inserta en la tabla "empresas" la empresa con pass 1234
+		$consulta=$mysqli->query( "SELECT * FROM empresas WHERE user='reprogranada'" );
+		$filas=$consulta->num_rows;
+
+		// Si la consulta devuelve 0 filas es que el admin no existe
+		if( !$filas )
+		{
+			$mysqli->query( "INSERT INTO empresas ( nombre, cif, email, user, pass )
+												VALUES ( 'reprogranada', '2e356387', 'reprogranada@localhost.dev', 'repro', 1234 )" );
+		}
+
+		//  EMPRESA 5
+		//  Inserta en la tabla "empresas" la empresa con pass 1234
+		$consulta=$mysqli->query( "SELECT * FROM empresas WHERE user='liqofert'" );
+		$filas=$consulta->num_rows;
+
+		// Si la consulta devuelve 0 filas es que el admin no existe
+		if( !$filas )
+		{
+			$mysqli->query( "INSERT INTO empresas ( nombre, cif, email, user, pass )
+												VALUES ( 'liqofert', '938d7394', 'liqofert@localhost.dev', 'liqo', 1234 )" );
+		}
+
+		//  EMPRESA 6
+		//  Inserta en la tabla "empresas" la empresa con pass 1234
+		$consulta=$mysqli->query( "SELECT * FROM empresas WHERE user='gexim'" );
+		$filas=$consulta->num_rows;
+
+		// Si la consulta devuelve 0 filas es que el admin no existe
+		if( !$filas )
+		{
+			$mysqli->query( "INSERT INTO empresas ( nombre, cif, email, user, pass )
+												VALUES ( 'gexim', '039d8ff7', 'gexim@localhost.dev', 'gexim', 1234 )" );
 		}
 	
 	// ------------------------
