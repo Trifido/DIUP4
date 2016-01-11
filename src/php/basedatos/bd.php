@@ -113,7 +113,7 @@
 		$mysqli->query( "CREATE TABLE evento
 				   (
 					id INT ( 3 ) auto_increment,
-					fecha DATETIME NOT NULL,
+					fecha DATE,
 					nombre_empresa VARCHAR ( 50 ) NOT NULL,
 					nombre_espacio VARCHAR ( 50 ) NOT NULL,
 					nombre VARCHAR ( 50 ) NOT NULL,
@@ -131,7 +131,7 @@
 				   (
 					id INT ( 3 ) auto_increment,
 					nombre_empresa VARCHAR ( 50 ) NOT NULL,
-					fecha DATETIME NOT NULL,
+					fecha DATE,
 					cantidad INT ( 10 ) NOT NULL,
 					estado BOOLEAN DEFAULT false,
 					PRIMARY KEY( id )
@@ -147,7 +147,7 @@
 					id INT ( 3 ) auto_increment,
 					nombre_empresa VARCHAR ( 50 ) NOT NULL,
 					nombre_espacio VARCHAR ( 50 ) NOT NULL,
-					fecha DATETIME NOT NULL,
+					fecha DATE,
 					PRIMARY KEY(id, nombre_empresa, nombre_espacio )
 					)" 
 		);
@@ -306,6 +306,31 @@
 		{
 			$mysqli->query( "INSERT INTO noticia ( titulo, empresa, tipo, foto, info ) VALUES ( 'NUEVOS ESPACIOS', 'admin', 'admin', 'not2.jpg', 'texto aqui de la noticia 2' )" );
 		}
+		
+	// ------------------------
+	// ESPACIOS : 
+	// ------------------------
+		//  Inserta en la tabla espacios el espacio 1
+		$consulta=$mysqli->query( "SELECT * FROM espacio WHERE nombre='Espacio A'" );
+		$filas=$consulta->num_rows;
+		
+		// Si la consulta devuelve 0 filas es que el espacio no existe
+		if( !$filas )
+		{
+			$mysqli->query( "INSERT INTO espacio ( nombre, capacidad, precio, foto,info ) VALUES ( 'Espacio A', 200, 150, 'esp1.jpg', 'texto aqui del espacio A' )" );
+		}
+		
+		//  Inserta en la tabla espacios el espacio 2
+		$consulta=$mysqli->query( "SELECT * FROM espacio WHERE nombre='Espacio B'" );
+		$filas=$consulta->num_rows;
+		
+		// Si la consulta devuelve 0 filas es que el espacio no existe
+		if( !$filas )
+		{
+			$mysqli->query( "INSERT INTO espacio ( nombre, capacidad, precio, foto,info ) VALUES ( 'Espacio B', 80, 190, 'esp2.jpg', 'texto aqui del espacio B' )" );
+		}
+	
+	
 	// Cierre de conexión.
 	$mysqli->close();
 	
