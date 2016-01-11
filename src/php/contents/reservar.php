@@ -11,12 +11,12 @@
 	
 	if(isset($_POST['enviar'])){
 	
-		$bd->connection->query( "UPDATE espacio SET estado = true
-                                       WHERE id = '".$_GET['id']."'" );
+		/*$bd->connection->query( "UPDATE espacio SET estado = true
+                                       WHERE id = '".$_GET['id']."'" );*/
 		
-		$bd->connection->query( "INSERT INTO reserva ( nombre_espacio, nombre_empresa ) VALUES ( '".$espacio->nombre."', '".$_SESSION['empresa'][0]."' )" );
+		$bd->connection->query( "INSERT INTO reserva ( nombre_espacio, nombre_empresa,fecha ) VALUES ( '".$espacio->nombre."', '".$_SESSION['empresa'][0]."', '".$_POST['date']."' )" );
 		
-		$bd->connection->query( "INSERT INTO pago ( cantidad,nombre_empresa ) VALUES ( '".$espacio->precio."', '".$_SESSION['empresa'][0]."' )" );
+		$bd->connection->query( "INSERT INTO pago ( cantidad,nombre_empresa, fecha ) VALUES ( '".$espacio->precio."', '".$_SESSION['empresa'][0]."', '".$_POST['date']."' )" );
 		
 		header("location:index.php?contenido=espacios_empresa");
 	}

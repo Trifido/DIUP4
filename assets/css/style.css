@@ -1088,3 +1088,20 @@ button[id*=boton_baja]{
 	color: white;
 	background-color: rgba(37, 121, 218, 0.64);
 }
+
+table, th, td {
+    border: 1px solid black;
+	text-align:center;
+	background-color:#273969;
+	color:orange;
+}
+th, td {
+	
+    padding: 15px;
+}
+
+th{
+	
+	background-color: black;
+	
+}
