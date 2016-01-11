@@ -318,6 +318,14 @@ a {
 	
 }
 
+/******************* CSS EMPRESAS *******************/
+
+.accept_user #boton_gestion_user #texto{
+	
+	display: none;
+	
+}
+
 /******************* CSS EMPLEADOS ******************/
 
 .banner_miempresa{
