@@ -1,11 +1,6 @@
 <div class = "eventos">
-
-	<div class="boton_nueva_noticia">
-    	
-        <a href="index.php?contenido=espacio_form">NUEVO ESPACIO</a>
-    	
-    </div>
 	
+    
     <div id="noticias">
     	
         <?php
@@ -23,7 +18,25 @@
 				$espacio->get_espacio( $row );
 				
 				$espacio->show_espacio();
+				if( !$espacio->estado ){
+					
+					echo "
+					
+						<div class='boton_reservar_espacio'>
+    	
+							<a href='index.php?contenido=reservar&id=".$espacio->id."'>RESERVAR ESPACIO</a>
+						
+					</div>
 				
+						";
+					}else{
+						
+						echo "<div class='boton_reservar_espacio'>
+								ESPACIO NO DISPONIBLE
+								</div>
+							";
+							
+					}
 			}
 			
 			$bd->close();

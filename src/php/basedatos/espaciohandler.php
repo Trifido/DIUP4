@@ -2,6 +2,7 @@
 
 	class Espacio{
 		
+		public $id;
 		public $nombre;
 		public $capacidad;
 		public $precio;
@@ -12,6 +13,7 @@
 		
 		public function get_espacio( $consulta ){
 			
+			$this->id = $consulta["id"];
 			$this->nombre = $consulta["nombre"];
 			$this->capacidad = $consulta["capacidad"];
 			$this->precio = $consulta["precio"];
@@ -31,7 +33,7 @@
 			echo( '<div id="right">' );
 				
 				echo('<div id="title">');
-					echo $this->titulo;
+					echo $this->nombre;
 				echo('</div>');
 				
 				echo('<div id="texto">');

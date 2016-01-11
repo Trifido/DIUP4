@@ -19,8 +19,7 @@
     
     <div id ="desc_empresa_7">
     	
-        <h1> MI EMPRESA </h1>
-        <p> bla bla bla </p>
+        <h1> <?php echo $result['user2']?> </h1>
         
     </div>
     
@@ -42,7 +41,7 @@
     </div>
 
 </div>
-
+<!--
 <div class="banner_mis_salas">
 	
 	<a>Salas de mi empresa</a>
@@ -68,5 +67,6 @@
         <p> bla bla bla </p>
         
     </div>
-    
+   
 </div>
+ -->

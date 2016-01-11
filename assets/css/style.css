@@ -395,7 +395,7 @@ a {
 	
 	margin-left: 325px;
 	margin-top: 10px;
-	width: 126px;
+	width: 127px;
 	padding: 10px;
 	background-color:black;
 	color:orange;
@@ -404,6 +404,26 @@ a {
 	
 }
 .boton_nueva_noticia a{
+	
+	color: inherit;
+	
+}
+
+.boton_reservar_espacio{
+	
+	margin-left: 456px;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	width: 192px;
+	padding: 10px;
+	background-color:black;
+	color:orange;
+	border-radius: 4px;
+	text-decoration: none;
+	text-align:center;
+	
+}
+.boton_reservar_espacio a{
 	
 	color: inherit;
 	
