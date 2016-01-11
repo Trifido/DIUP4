@@ -160,8 +160,10 @@ a {
 	background-color: white;
 	opacity: 0.0;
 	width: 400px;
-	height: 220px;
+	height: 145px;
 	text-align:center;
+	font-size: 50px;
+    padding-top: 75px;
 	margin: 7px 0 0 2px;
 	
 }
@@ -172,8 +174,10 @@ a {
 	background-color: white;
 	opacity: 0.0;
 	width: 350px;
-	height: 220px;
+	height: 145px;
 	text-align:center;
+	font-size: 50px;
+    padding-top: 75px;
 	margin: 7px 0 0 416px;
 	
 }
@@ -183,8 +187,10 @@ a {
 	background-color: white;
 	opacity: 0.0;
 	width: 350px;
-	height: 220px;
+	height: 145px;
 	text-align:center;
+	font-size: 50px;
+    padding-top: 75px;
 	margin: 236px 0 0 2px;
 	
 }
@@ -194,8 +200,10 @@ a {
 	background-color: white;
 	opacity: 0.0;
 	width: 400px;
-	height: 220px;
+	height: 145px;
 	text-align:center;
+	font-size: 50px;
+    padding-top: 75px;
 	margin: 236px 0 0 366px;
 	
 }
@@ -205,8 +213,10 @@ a {
 	background-color: white;
 	opacity: 0.0;
 	width: 400px;
-	height: 220px;
+	height: 145px;
 	text-align:center;
+	font-size: 50px;
+    padding-top: 75px;
 	margin: 465px 0 0 2px;
 	
 }
@@ -216,8 +226,10 @@ a {
 	background-color: white;
 	opacity: 0.0;
 	width: 350px;
-	height: 220px;
+	height: 145px;
 	text-align:center;
+	font-size: 50px;
+    padding-top: 75px;
 	margin: 465px 0 0 416px;
 	
 }

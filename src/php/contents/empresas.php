@@ -5,31 +5,50 @@
 </div>
 
 <div class ="marco_empresa">
-	
-    	<img id="foto_izquierda" height = "220px" width = "400px" src ="./assets/img/empresa1.JPG">
-    	
-        <div id = "desc_empresa_1"> texto de la foto 1 </div>
-        
-    	<img id="foto_derecha" height = "220px" width = "350px" src ="./assets/img/empresa2.png">
-    	
-        <div id = "desc_empresa_2"> texto de la foto 2 </div>
-        
-    	<img id="foto_izquierda" height = "220px" width = "350px" src ="./assets/img/empresa3.JPG">
-    	
-        <div id = "desc_empresa_3"> texto de la foto 3 </div>
-        
-    	<img id="foto_derecha" height = "220px" width = "400px" src ="./assets/img/empresa4.JPG">
-    	
-        <div id = "desc_empresa_4"> texto de la foto 4 </div>
-        
-    	<img id="foto_izquierda" height = "220px" width = "400px" src ="./assets/img/empresa5.JPG">
-    	
-        <div id = "desc_empresa_5"> texto de la foto 5 </div>
-        
-    	<img id="foto_derecha" height = "220px" width = "350px" src ="./assets/img/empresa6.JPG">
-    	
-        <div id = "desc_empresa_6"> texto de la foto 6 </div>
-        
+		
+       	<?php
+			
+			include( "./src/php/basedatos/bdhandler.php" );
+			include( "./src/php/basedatos/pymeshandler.php" );
+			
+			$pyme1 = new Pyme();
+			$pyme2 = new Pyme();
+			
+			$db = new bdhandler( "localhost", "diu", "root", "" );
+			$query = $db->connection->query( "SELECT * FROM empresas");
+			
+			$cont = 2;
+			
+			for( $i = 1; $i < 6; $i+=2, $cont+=2 ){
+				
+				$pyme1->get_pyme( $query->fetch_assoc() );
+				$pyme2->get_pyme( $query->fetch_assoc() );
+				
+				if( $i % 3 == 0){
+					
+					$width1 = "350px";
+					$width2 = "400px";
+					
+				}else{
+				
+					$width1 = "400px";
+					$width2 = "350px";
+				
+				}
+				
+				echo "	<img id='foto_izquierda' height = '220px' width = '".$width1."' src ='./assets/img/".$pyme1->foto."'>
+						
+						<div id = 'desc_empresa_".$i."'> ".$pyme1->nombre." </div>
+						
+						<img id='foto_derecha' height = '220px' width = '".$width2."' src ='./assets/img/".$pyme2->foto."'>
+						
+						<div id = 'desc_empresa_".$cont."'> ".$pyme2->nombre." </div>
+						
+					";
+								
+			}
+			
+		?>
 </div>
 
 

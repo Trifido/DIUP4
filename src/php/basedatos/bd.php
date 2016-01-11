@@ -99,6 +99,7 @@
 					nombre VARCHAR ( 50 ) NOT NULL,
 					capacidad INT ( 3 ) NOT NULL,
 					precio INT ( 3 ) NOT NULL,
+					foto VARCHAR ( 50 ),
 					info VARCHAR ( 150 ),
 					estado BOOLEAN DEFAULT false,
 					PRIMARY KEY(id, nombre)
@@ -220,8 +221,8 @@
 		// Si la consulta devuelve 0 filas es que el admin no existe
 		if( !$filas )
 		{
-			$mysqli->query( "INSERT INTO empresas ( nombre, cif, email, user, pass ) 
-								VALUES ( 'farma', '76767676', 's@localhost.dev', 'farma', 1234 )" );
+			$mysqli->query( "INSERT INTO empresas ( nombre, cif, email, user, pass,foto ) 
+								VALUES ( 'farma', '76767676', 's@localhost.dev', 'farma', 1234,'empresa1.JPG' )" );
 		}
 
 		//  EMPRESA 2
@@ -232,8 +233,8 @@
 		// Si la consulta devuelve 0 filas es que el admin no existe
 		if( !$filas )
 		{
-			$mysqli->query( "INSERT INTO empresas ( nombre, cif, email, user, pass )
-										VALUES ( 'basti', '0b19e397', 'basti@localhost.dev', 'basti', 1234 )" );
+			$mysqli->query( "INSERT INTO empresas ( nombre, cif, email, user, pass,foto )
+										VALUES ( 'basti', '0b19e397', 'basti@localhost.dev', 'basti', 1234,'empresa2.png' )" );
 		}
 
 		//  EMPRESA 3
@@ -244,8 +245,8 @@
 		// Si la consulta devuelve 0 filas es que el admin no existe
 		if( !$filas )
 		{
-			$mysqli->query( "INSERT INTO empresas ( nombre, cif, email, user, pass )
-												VALUES ( 'biocaoscontrol', '832n5k71', 'biocaos@localhost.dev', 'biocaoscontrol', 1234 )" );
+			$mysqli->query( "INSERT INTO empresas ( nombre, cif, email, user, pass,foto )
+												VALUES ( 'biocaoscontrol', '832n5k71', 'biocaos@localhost.dev', 'biocaoscontrol', 1234,'empresa3.JPG' )" );
 		}
 
 		//  EMPRESA 4
@@ -256,8 +257,8 @@
 		// Si la consulta devuelve 0 filas es que el admin no existe
 		if( !$filas )
 		{
-			$mysqli->query( "INSERT INTO empresas ( nombre, cif, email, user, pass )
-												VALUES ( 'reprogranada', '2e356387', 'reprogranada@localhost.dev', 'reprogranada', 1234 )" );
+			$mysqli->query( "INSERT INTO empresas ( nombre, cif, email, user, pass,foto )
+												VALUES ( 'reprogranada', '2e356387', 'reprogranada@localhost.dev', 'reprogranada', 1234,'empresa4.JPG' )" );
 		}
 
 		//  EMPRESA 5
@@ -268,8 +269,8 @@
 		// Si la consulta devuelve 0 filas es que el admin no existe
 		if( !$filas )
 		{
-			$mysqli->query( "INSERT INTO empresas ( nombre, cif, email, user, pass )
-												VALUES ( 'liqofert', '938d7394', 'liqofert@localhost.dev', 'liqofert', 1234 )" );
+			$mysqli->query( "INSERT INTO empresas ( nombre, cif, email, user, pass,foto )
+												VALUES ( 'liqofert', '938d7394', 'liqofert@localhost.dev', 'liqofert', 1234,'empresa5.JPG' )" );
 		}
 
 		//  EMPRESA 6
@@ -280,8 +281,8 @@
 		// Si la consulta devuelve 0 filas es que el admin no existe
 		if( !$filas )
 		{
-			$mysqli->query( "INSERT INTO empresas ( nombre, cif, email, user, pass )
-												VALUES ( 'gexim', '039d8ff7', 'gexim@localhost.dev', 'gexim', 1234 )" );
+			$mysqli->query( "INSERT INTO empresas ( nombre, cif, email, user, pass,foto )
+												VALUES ( 'gexim', '039d8ff7', 'gexim@localhost.dev', 'gexim', 1234,'empresa6.JPG' )" );
 		}
 	
 	// ------------------------
