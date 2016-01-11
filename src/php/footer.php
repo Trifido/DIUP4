@@ -1,7 +1,7 @@
 <footer>
 		
 	<div id="footer_izquierda">
-    	<h1>+Información</h1>
+        <a href="index.php?contenido=about"><h1>+Información</h1></a>
     </div>
     
     <div id="footer_centro">
