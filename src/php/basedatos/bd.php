@@ -245,7 +245,7 @@
 		if( !$filas )
 		{
 			$mysqli->query( "INSERT INTO empresas ( nombre, cif, email, user, pass )
-												VALUES ( 'biocaoscontrol', '832n5k71', 'biocaos@localhost.dev', 'bio', 1234 )" );
+												VALUES ( 'biocaoscontrol', '832n5k71', 'biocaos@localhost.dev', 'biocaoscontrol', 1234 )" );
 		}
 
 		//  EMPRESA 4
@@ -257,7 +257,7 @@
 		if( !$filas )
 		{
 			$mysqli->query( "INSERT INTO empresas ( nombre, cif, email, user, pass )
-												VALUES ( 'reprogranada', '2e356387', 'reprogranada@localhost.dev', 'repro', 1234 )" );
+												VALUES ( 'reprogranada', '2e356387', 'reprogranada@localhost.dev', 'reprogranada', 1234 )" );
 		}
 
 		//  EMPRESA 5
@@ -269,7 +269,7 @@
 		if( !$filas )
 		{
 			$mysqli->query( "INSERT INTO empresas ( nombre, cif, email, user, pass )
-												VALUES ( 'liqofert', '938d7394', 'liqofert@localhost.dev', 'liqo', 1234 )" );
+												VALUES ( 'liqofert', '938d7394', 'liqofert@localhost.dev', 'liqofert', 1234 )" );
 		}
 
 		//  EMPRESA 6
