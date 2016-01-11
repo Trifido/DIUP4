@@ -4,6 +4,32 @@
 			<a href="index.php"><img id="imglogo" src="assets/img/logo.png" title="Ir a la página principal" alt="logo"/></a>
 		</div> 						<!-- end logo -->
         
+        <div id = "name_user">
+        
+        	<?php
+				
+				if( isset( $_SESSION['user'] ) ){
+
+					echo $_SESSION['user'][0];
+					
+				}else if( isset( $_SESSION['empresa']) ){
+					
+					echo $_SESSION['empresa'][0];
+	
+				}else if ( isset( $_SESSION['admin']) ){
+	
+					echo "ADMIN";
+					
+				}else{
+					
+					echo "INVITADO";
+					
+				}
+			
+			?>
+        
+        </div>
+        
         <div class="head_buttons"> 	<!-- init botones header -->
         	
             <div id="head_button_top">

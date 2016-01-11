@@ -223,6 +223,27 @@
 								VALUES ( 'farma', '76767676', 's@localhost.dev', 'farma', 1234 )" );
 		}
 	
+	// ------------------------
+	// NOTICIAS : 
+	// ------------------------
+		//  Inserta en la tabla noticas la noticia 1
+		$consulta=$mysqli->query( "SELECT * FROM noticia WHERE titulo='NUEVAS MEJORAS'" );
+		$filas=$consulta->num_rows;
+		
+		// Si la consulta devuelve 0 filas es que la noticia no existe
+		if( !$filas )
+		{
+			$mysqli->query( "INSERT INTO noticia ( titulo, empresa, tipo, foto, info ) VALUES ( 'NUEVAS MEJORAS', 'admin', 'admin', 'not1.jpg', 'texto aqui de la noticia 1' )" );
+		}
+		//  Inserta en la tabla noticas la noticia 2
+		$consulta=$mysqli->query( "SELECT * FROM noticia WHERE titulo='NUEVOS ESPACIOS'" );
+		$filas=$consulta->num_rows;
+		
+		// Si la consulta devuelve 0 filas es que la noticia no existe
+		if( !$filas )
+		{
+			$mysqli->query( "INSERT INTO noticia ( titulo, empresa, tipo, foto, info ) VALUES ( 'NUEVOS ESPACIOS', 'admin', 'admin', 'not2.jpg', 'texto aqui de la noticia 2' )" );
+		}
 	// Cierre de conexión.
 	$mysqli->close();
 	

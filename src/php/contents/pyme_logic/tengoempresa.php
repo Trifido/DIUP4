@@ -1,3 +1,12 @@
+<?php
+
+	$query = $db->connection->query( "SELECT * FROM pertenecer WHERE user1 = '".$_SESSION['user'][0]."'");
+	
+	$result = $query->fetch_assoc();
+	
+?>
+
+
 <div class="banner_miempresa">
 	
 	<a>Mi Empresa</a>
@@ -18,7 +27,8 @@
     <div id="info_empresa">
     
     	<div id="nombre_empresa">
-    		Empresa: &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; AVAM
+    		Empresa: &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; 
+            <?php echo $result['user2']?>
     	</div>
     
         <div id="desc_empresa">

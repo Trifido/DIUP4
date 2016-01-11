@@ -247,15 +247,17 @@ a {
 
 }
 
-.eventos #title, #title1, #title2, #title3, #title4{
-	
+.eventos div[id*=title]{
+
 	width: 425px;
 	padding: 10px;
 	border: 1px solid black;
 	text-align: center;
 	margin: 5px;
-	
+
 }
+
+
 
 .eventos #texto{
 	
@@ -323,6 +325,75 @@ a {
 .accept_user #boton_gestion_user #texto{
 	
 	display: none;
+	
+}
+
+.accept_user #boton_gestion_user #boton{
+	
+	margin-left:120px;
+	
+}
+
+.marco_formulario{
+	
+	width: 773px;
+	margin: 0 auto;
+	padding: 5px;
+	
+}
+
+.formulario_noticias{
+	
+	color:orange;
+	background-color: black;
+	padding: 10px;
+	
+}
+
+.formulario_noticias #title{
+	
+	width: 750px;
+	
+}
+
+.formulario_noticias #content{
+	
+	width: 750px;
+	height: 77px;
+	
+}
+
+.formulario_noticias #boton{
+	
+	border-radius: 4px;
+	width: 300px;
+	margin-left: 245px;
+	background-color: #FFD382;
+	border-color: orange;
+	
+}
+
+.formulario_noticias a{
+	
+	margin-left: 5px;
+	
+}
+
+.boton_nueva_noticia{
+	
+	margin-left: 325px;
+	margin-top: 10px;
+	width: 126px;
+	padding: 10px;
+	background-color:black;
+	color:orange;
+	border-radius: 4px;
+	text-decoration: none;
+	
+}
+.boton_nueva_noticia a{
+	
+	color: inherit;
 	
 }
 
@@ -651,7 +722,7 @@ a {
 	
 }
 
-#boton_baja1, #boton_baja2, #boton_baja3, #boton_baja4{
+button[id*=boton_baja]{
 	
 	float:right;
 	width: 100px;
@@ -712,7 +783,6 @@ a {
 	float:right;
 	width:250px;
 	color:white;
-	padding-top:10px;
 	padding-right:25px;
 	
 }
@@ -859,7 +929,14 @@ a {
 	
 }
 
-
+#name_user{
+	
+	color: white;
+	position: relative;
+	height: 20px;
+	font-size:50px;
+	
+}
 
 /******************* FOOTER ******************/
 

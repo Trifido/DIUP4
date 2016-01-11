@@ -1,50 +1,34 @@
 <div class = "eventos"> 
 
-	<div id = "ev">
-    
-    	<img id="img" src="./assets/img/ev1.png">
+	<div class="boton_nueva_noticia">
     	
-        <div id="right">
-            <div id = "title">
-                CURSO DE METODOLOGÍAS ÁGILES <button id="boton_noticias1"> Eliminar </button>
-            </div>
-            
-            <div id = "texto">
-            	Descripción del curso 1
-            </div>
-        </div>
-        
+        <a href="index.php?contenido=noticia_form_admin">NUEVA NOTICIA</a>
+    	
     </div>
-    
-    <div id = "ev">
-    
-    	<img id="img" src="./assets/img/ev2.png">
+	
+    <div id="noticias">
     	
-        <div id="right">
-            <div id = "title">
-                CURSO DE ALEMAN <button id="boton_noticias2"> Eliminar </button>
-            </div>
-            
-            <div id = "texto">
-            	Descripción del curso 2
-            </div>
-        </div>
-        
-    </div>
-    
-    <div id = "ev">
-    
-    	<img id="img" src="./assets/img/ev3.png">
-    	
-        <div id="right">
-            <div id = "title">
-                CURSO DE MARKETING <button id="boton_noticias3"> Eliminar </button>
-            </div>
-            
-            <div id = "texto">
-            	Descripción del curso 3
-            </div>
-        </div>
+        <?php
+		
+			include( "./src/php/basedatos/bdhandler.php" );
+			include( "./src/php/basedatos/noticiahandler.php" );
+			
+			$bd = new bdhandler( "localhost", "diu", "root", "" );
+			
+			$consulta = $bd->connection->query( "SELECT * FROM noticia" );
+			$noticia = new Noticia();
+			
+			while( $row = $consulta->fetch_assoc() ){
+				
+				$noticia->get_noticia( $row );
+				
+				$noticia->show_noticia();
+				
+			}
+			
+			$bd->close();
+			
+		?>
         
     </div>
 

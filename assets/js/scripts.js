@@ -81,14 +81,7 @@ $(document).ready(function(){
 				
 			}
 			
-			if( num == 1 )
-				$( '#title1' ).css("background-color", color);
-			else if( num == 2)
-				$( '#title2' ).css("background-color", color);
-			else if( num == 3)
-				$( '#title3' ).css("background-color", color);
-			else
-				$( '#title4' ).css("background-color", color);
+			$( '#title' + num ).css("background-color", color);
 			
 			$( '#boton_baja' + num ).text( texto );
 			
