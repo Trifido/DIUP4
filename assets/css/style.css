@@ -1,6 +1,7 @@
 a {
 	
 	text-decoration: none;
+	color: inherit;
 	
 }
 
@@ -281,6 +282,14 @@ a {
 	margin: 5px;
 	
 }
+
+.eventos #texto2{
+	height: 175px;
+	width: 445px;
+	margin: 5px;
+
+}
+
 .eventos #right{
 	
 	float:right;
@@ -1030,3 +1039,52 @@ button[id*=boton_baja]{
 	
 }
 
+.contacto{
+	position: relative;
+	font-family: "Benton Sans Light";
+	font-size: 18px;
+	text-align: center;
+}
+
+.contacto img{
+	margin-top: 10px;
+	width: 100%;
+}
+
+.contacto .welcome{
+	position: absolute;
+	bottom: 100%;
+	left: 20%;
+	color: #fff;
+	text-shadow: 0 0 5px black;
+}
+
+.contacto .texto{
+	margin-top: 15px;
+	font-size: 14px;
+}
+
+.contacto .info{
+	position: absolute;
+	width: 50%;
+	height: 50%;
+	bottom: 15px;
+	right: 10px;
+	background-color: white;
+}
+
+.contacto .btn{
+	margin: 25px 0 0 0;
+	background-color: white;
+	padding: 20px 55px;
+	display: inline-block;
+	line-height: 1em;
+	font-weight: 400;
+	color: black;
+	border: 1px solid #b2b2b2;
+}
+
+.contacto .btn:hover{
+	color: white;
+	background-color: rgba(37, 121, 218, 0.64);
+}

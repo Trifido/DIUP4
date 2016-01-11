@@ -33,7 +33,7 @@
         <div class="head_buttons"> 	<!-- init botones header -->
         	
             <div id="head_button_top">
-            	<a>Home</a> &emsp;&emsp;<a>About</a> &emsp;&emsp; <a>Contact</a>
+            	<a href="index.php">Home</a> &emsp;&emsp;<a href="index.php?contenido=about">About</a> &emsp;&emsp; <a href="index.php?contenido=contacto">Contact</a>
             </div>
             	<br>
             <div id="head_button_bot">
